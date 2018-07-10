@@ -2,8 +2,9 @@
 
 html {
   font-size: 62.5%;
+  background-color: #000c1a;
 }
-
+/* barre de navigation */
 nav {
 
 
@@ -83,13 +84,13 @@ nav .films a {
 }
 
 
-
+/* CAROUSSEL */
 
 #wrapper{
   width:900px;
   -webkit-perspective: 800;
   -moz-perspective: 800;
-  margin: 150px auto 0 auto;
+  margin: 100px auto 0 auto;
 }
 
 .carrousel{
@@ -97,15 +98,15 @@ nav .films a {
   height: 300px;
   margin: 0 auto;
   -webkit-transform-style: preserve-3d;
-  -webkit-animation: Caroussel 10s infinite linear;
+  -webkit-animation: Caroussel 20s infinite linear;
   -moz-transform-style: preserve-3d;
-  -moz-animation: Caroussel 10s infinite linear;
+  -moz-animation: Caroussel 20s infinite linear;
 }
 
 .plan{
   position:absolute;
-  height: 300px;
-  width: 225px;
+  height: 400px;
+  width: 300px;
   text-align:center;
   font-size: 8em;
   color:#FFF;
@@ -124,25 +125,57 @@ nav .films a {
   to { -moz-transform: rotateY(-360deg); }
 }
 .affiche {
-  width:225px;
-  height:300px;
+  width:300px;
+  height:400px;
 }
 
 
-.p1{ -webkit-transform: translateZ(300px);}
-.p2{ -webkit-transform: rotateY(45deg) translateZ(300px);}
-.p3{ -webkit-transform: rotateY(90deg) translateZ(300px);}
-.p4{ -webkit-transform: rotateY(135deg) translateZ(300px);}
-.p5{ -webkit-transform: rotateY(180deg) translateZ(300px);}
-.p6{ -webkit-transform: rotateY(225deg) translateZ(300px);}
-.p7{ -webkit-transform: rotateY(270deg) translateZ(300px);}
-.p8{ -webkit-transform: rotateY(315deg) translateZ(300px);}
+.p1{ -webkit-transform: translateZ(400px);}
+.p2{ -webkit-transform: rotateY(45deg) translateZ(400px);}
+.p3{ -webkit-transform: rotateY(90deg) translateZ(400px);}
+.p4{ -webkit-transform: rotateY(135deg) translateZ(400px);}
+.p5{ -webkit-transform: rotateY(180deg) translateZ(400px);}
+.p6{ -webkit-transform: rotateY(225deg) translateZ(400px);}
+.p7{ -webkit-transform: rotateY(270deg) translateZ(400px);}
+.p8{ -webkit-transform: rotateY(315deg) translateZ(400px);}
 
-.p1{ -moz-transform: translateZ(300px);}
-.p2{ -moz-transform: rotateY(45deg) translateZ(300px);}
-.p3{ -moz-transform: rotateY(90deg) translateZ(300px);}
-.p4{ -moz-transform: rotateY(135deg) translateZ(300px);}
-.p5{ -moz-transform: rotateY(180deg) translateZ(300px);}
-.p6{ -moz-transform: rotateY(225deg) translateZ(300px);}
-.p7{ -moz-transform: rotateY(270deg) translateZ(300px);}
-.p8{ -moz-transform: rotateY(315deg) translateZ(300px);}
+.p1{ -moz-transform: translateZ(400px);}
+.p2{ -moz-transform: rotateY(45deg) translateZ(400px);}
+.p3{ -moz-transform: rotateY(90deg) translateZ(400px);}
+.p4{ -moz-transform: rotateY(135deg) translateZ(400px);}
+.p5{ -moz-transform: rotateY(180deg) translateZ(400px);}
+.p6{ -moz-transform: rotateY(225deg) translateZ(400px);}
+.p7{ -moz-transform: rotateY(270deg) translateZ(400px);}
+.p8{ -moz-transform: rotateY(315deg) translateZ(400px);}
+
+
+/* Main */
+main {
+  margin: 200px 50px 100px 50px;
+
+}
+main h2 {
+  font-size: 4rem;
+  font-family: 'Exo', sans-serif;
+  color: white;
+}
+.nouveautes ul, .anepasmanquer ul, .pourfamille ul{
+  display: flex;
+
+  margin: 50px 0 100px 0;
+}
+main ul {
+text-align: center;
+flex-wrap: wrap;
+}
+main li {
+
+  margin: 15px 20px 0 0;
+}
+main p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color:white;
+}
+
+/* footer */
