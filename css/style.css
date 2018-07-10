@@ -5,6 +5,8 @@ html {
 }
 
 nav {
+
+
   background-color: #000;
   position: sticky;
   top: 0px;
@@ -14,18 +16,25 @@ nav {
   overflow: hidden;
 }
 
-nav a, nav img {
-  float: left;
+.connexion a, nav img {
+
   font-size: 2.5rem;
-  line-height: 100px;
+  line-height: 60px;
   color: #FFF;
-  margin: 0 20px;
+  margin: 0 10px;
   text-decoration: none;
   font-family: 'Exo', sans-serif;
 }
-
+.leftnav a {
+  font-size: 4rem;
+  line-height: 60px;
+  color: #FFF;
+  margin: 0 10px;
+  text-decoration: none;
+  font-family: 'Exo', sans-serif;
+}
 nav a:hover {
-  color: #41B0C9;
+  color: #0063CD;
   transition: .5s;
 }
 
@@ -34,17 +43,41 @@ nav a:hover .tel {
   transition: .5s;
 }
 
-nav .right {
+nav .connexion {
+
   float: right;
+  display: flex;
+  flex-direction: column;
+  flex-direction: center;
+
+
 }
 
 nav .logo {
   height: 100px;
-  
+  margin-left: 20px;
   border-radius: 2px;
 }
 
 nav .tel {
   height: 25px;
   margin: 37.7px 7px 0;
+}
+nav .connexion, .nouveaucompte {
+
+
+}
+nav input {
+  margin: 5px 0px 5px 0px;
+  min-height: 30px;
+}
+nav .films a {
+  font-size: 4rem;
+}
+.leftnav {
+  float: left;
+  display: flex;
+  justify-content: space-between;
+  width:30%;
+  align-items: center;
 }
