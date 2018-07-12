@@ -16,7 +16,7 @@
 		<script>
 $(document).ready(function(){
     $("#flip").click(function(){
-        $("#panel").slideDown("slow");
+        $("#panel").slideToggle("slow");
     });
 });
 </script>
@@ -28,12 +28,15 @@ $(document).ready(function(){
     <nav>
 			<div class="leftnav">
 				<a href="index.html"><img src="img/logometropolis.jpg" alt="Metropolis VOD" class="logo" /></a>
-	      <a href="films.html" class="films">Films</a>
+	      <a href="listefilms.html" class="films">Films</a>
 				<div class="searchbar">
 
-      <input type="text" class="btn-extended" placeholder="Recherche..." />
+						<a id="flip" class="fas fa-search" href="#"></a>
 
-      <div class="btn-search"></div>
+
+
+
+
 
     </div>
 			</div>
@@ -50,7 +53,7 @@ $(document).ready(function(){
 
 			</div>
     </nav>
-
+		<input id="panel" type="text" class="btn-extended" placeholder="Recherchez votre film par nom,réalisateur,acteur" />
 		<div id="wrapper" style="margin-top:80px;">
 
 
@@ -78,7 +81,7 @@ $(document).ready(function(){
 				<li><a href="index.html"><img src="img/5.jpeg" alt="Metropolis VOD" class="pres1" /></a><p class="fontroger">Titre</p></li>
 				<li><a href="index.html"><img src="img/6.jpeg" alt="Metropolis VOD" class="pres1" /></a><p class="fontroger">Titre</p></li>
 				<li><a href="index.html"><img src="img/7.jpeg" alt="Metropolis VOD" class="pres1" /></a><p class="fontroger">Titre</p></li>
-
+			</ul>
 		</div>
 			<h2>A ne pas manquer</h2>
 		<div class="anepasmanquer">
@@ -132,6 +135,8 @@ $(document).ready(function(){
 				<a href="index.html" class="fab fa-facebook-square"></a>
 				<a href="index.html" class="fab fa-twitter-square"></a>
 				<a href="index.html" class="fab fa-instagram"></a>
+				<a href="index.html" class="fas fa-search"></a>
+
 			</div>
 			<div class="contact">
 				<button type="button" name="button" class="bouton">CONTACT</button>

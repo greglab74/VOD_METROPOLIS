@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+		<link rel="shortcut icon" type="image/x-icon" href="resource/img/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+	$(document).ready(function(){
+		$("#flip").click(function(){
+				$("#panel").slideToggle("slow");
+		});
+	});
+	</script>
+
+		<title>METROPOLIS VOD</title>
+	</head>
+
+	<body>
+		<nav>
+			<div class="leftnav">
+				<a href="index.html"><img src="img/logometropolis.jpg" alt="Metropolis VOD" class="logo" /></a>
+				<a href="listefilms.html" class="films">Films</a>
+				<div class="searchbar">
+
+						<a id="flip" class="fas fa-search" href="#"></a>
+
+
+
+
+
+
+		</div>
+			</div>
+
+			<div class="connexion">
+				<div class="">
+					<input type="text" name="identifiant" placeholder="identifiant">
+					<input type="text" name="password" placeholder="mot de passe">
+				</div>
+				<div class="">
+					<a href="buy.php" class="connexion">Connexion</a>
+					<a href="buy.php" class="nouveaucompte">s'inscrire</a>
+				</div>
+
+			</div>
+		</nav>
+		<input id="panel" type="text" class="btn-extended" placeholder="Recherchez votre film par nom,réalisateur,acteur" />
+  <main>
+		<div id="listefilms">
+			<section class="filtre">
+				<form action="#" method="post">
+					<p class="select">
+						<select id="genre" name="genre">
+							<option value="none" selected>Genre</option>
+							<option value="1">Action</option>
+							<option value="2">Comédie</option>
+							<option value="3">Aventure</option>
+							<option value="4">Science-fiction</option>
+							<option value="5">Humour</option>
+							<option value="6">Fantastique</option>
+							<option value="7">Jeunesse</option>
+							<option value="8">Animation</option>
+						</select>
+					</p>
+
+					<p class="select">
+						<select id="realisateur" name="realisateur">
+							<option value="none" selected>Réalisateur</option>
+						</select>
+					</p>
+
+					<p class="select">
+						<select id="acteur" name="acteur">
+							<option value="none" selected>Acteur</option>
+						</select>
+					</p>
+
+					<p class="select">
+						<select id="annee" name="annee">
+							<option value="annee" selected>Année</option>
+						</select>
+					</p>
+
+					<p>
+						<input type="submit" value="Valider" />
+						<input type="reset" value="Annuler">
+					</p>
+				</form>
+			</section>
+
+			<section class="liste">
+				<ul>
+					<li><a href="index.html"><img src="img/1.jpeg" alt="Metropolis VOD" class="pres1" /></a><p class="fontroger">Titre</p></li>
+					<li><a href="index.html"><img src="img/2.jpeg" alt="Metropolis VOD" class="pres1" /></a><p class="fontroger">Titre</p></li>
+					<li><a href="index.html"><img src="img/3.jpeg" alt="Metropolis VOD" class="pres1" /></a><p class="fontroger">Titre</p></li>
+					<li><a href="index.html"><img src="img/4.jpeg" alt="Metropolis VOD" class="pres1" /></a><p class="fontroger">Titre</p></li>
+					<li><a href="index.html"><img src="img/5.jpeg" alt="Metropolis VOD" class="pres1" /></a><p class="fontroger">Titre</p></li>
+					<li><a href="index.html"><img src="img/6.jpeg" alt="Metropolis VOD" class="pres1" /></a><p class="fontroger">Titre</p></li>
+					<li><a href="index.html"><img src="img/7.jpeg" alt="Metropolis VOD" class="pres1" /></a><p class="fontroger">Titre</p></li>
+				</ul>
+			</section>
+		</div>
+
+  </main>
+
+
+	<footer>
+		<div class="up">
+			<div class="films">
+				<h3><a href="index.html">Films</a></h3>
+				<div class="genre">
+					<ul class="rang">
+						<li><a href="index.html">Action</a></li>
+						<li><a href="index.html">Comédie</a></li>
+						<li><a href="index.html">Aventure</a></li>
+						<li><a href="index.html">Sci-fi</a></li>
+					</ul>
+					<ul class="rang">
+						<li><a href="index.html">Humour</a></li>
+						<li><a href="index.html">Fantastique</a></li>
+						<li><a href="index.html">Jeunesse</a></li>
+						<li><a href="index.html">Animation</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="reso">
+				<a href="index.html" class="fab fa-facebook-square"></a>
+				<a href="index.html" class="fab fa-twitter-square"></a>
+				<a href="index.html" class="fab fa-instagram"></a>
+			</div>
+			<div class="contact">
+				<button type="button" name="button" class="bouton">CONTACT</button>
+			</div>
+		</div>
+		<div class="down">
+			<a href="index.html">Mentions légales</a>
+			<a href="index.html">Conditions de vente</a>
+			<a href="index.html">Cookies</a>
+			<a href="index.html">Confidentialité</a>
+
+		</div>
+	</footer>
+  </body>
+
+</html>

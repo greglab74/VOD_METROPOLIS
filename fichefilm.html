@@ -12,84 +12,73 @@
 
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-
+		<script>
+	$(document).ready(function(){
+		$("#flip").click(function(){
+				$("#panel").slideToggle("slow");
+		});
+	});
+	</script>
 
 		<title>METROPOLIS VOD</title>
 	</head>
 
-  <body>
-    <nav>
+	<body>
+		<nav>
 			<div class="leftnav">
 				<a href="index.html"><img src="img/logometropolis.jpg" alt="Metropolis VOD" class="logo" /></a>
-	      <a href="films.php" class="films">Films</a>
+				<a href="listefilms.html" class="films">Films</a>
 				<div class="searchbar">
 
-      <input type="text" class="btn-extended" placeholder="Recherche..." />
+						<a id="flip" class="fas fa-search" href="#"></a>
 
-      <div class="btn-search"></div>
 
-    </div>
+
+
+
+
+		</div>
 			</div>
 
 			<div class="connexion">
 				<div class="">
 					<input type="text" name="identifiant" placeholder="identifiant">
-		      <input type="text" name="password" placeholder="mot de passe">
+					<input type="text" name="password" placeholder="mot de passe">
 				</div>
 				<div class="">
 					<a href="buy.php" class="connexion">Connexion</a>
-		      <a href="buy.php" class="nouveaucompte">s'inscrire</a>
+					<a href="buy.php" class="nouveaucompte">s'inscrire</a>
 				</div>
 
 			</div>
-
-    </nav>
+		</nav>
+		<input id="panel" type="text" class="btn-extended" placeholder="Recherchez votre film par nom,réalisateur,acteur" />
   <main>
-		<section class="filtre">
-			<form action="#" method="post">
-				<p class="select">
-					<select id="genre" name="genre">
-						<option value="none" selected>Genre</option>
-						<option value="1">Action</option>
-						<option value="2">Comédie</option>
-						<option value="3">Aventure</option>
-						<option value="4">Science-fiction</option>
-						<option value="5">Humour</option>
-						<option value="6">Fantastique</option>
-						<option value="7">Jeunesse</option>
-						<option value="8">Animation</option>
-					</select>
-				</p>
+		<div id="section1">
+			<div class="aff">
+				<a href="index.html"><img src="img/1.jpeg" alt="Metropolis VOD" class="affichefilm" /></a>
+			</div>
+			<div class="bandeannonce">
+				<p>BANDE ANNONCE</p>
+			</div>
+		</div>
+		<div id="section2">
+			<div class="scenario">
+				<h3>Synopsis:</h3>
+				<p>A la suite d’un accident de parapente, Philippe, riche aristocrate, engage comme aide à domicile Driss, un jeune de banlieue tout juste sorti de prison. Bref la personne la moins adaptée pour le job. Ensemble ils vont faire cohabiter Vivaldi et Earth Wind and Fire, le verbe et la vanne, les costumes et les bas de survêtement... Deux univers vont se télescoper, s’apprivoiser, pour donner naissance à une amitié aussi dingue, drôle et forte qu’inattendue, une relation unique qui fera des étincelles et qui les rendra... Intouchables. </p>
+			</div>
+			<div class="acteurs">
+				<h3>réalisateur:+++++++++</h3>
+				<h3>Acteurs:++++++++</h3>
+			</div>
+			<div class="avis">
 
-				<p class="select">
-					<select id="realisateur" name="realisateur">
-						<option value="none" selected>Réalisateur</option>
-					</select>
-				</p>
+			</div>
+			<div class="louer">
 
-				<p class="select">
-					<select id="acteur" name="acteur">
-						<option value="none" selected>Acteur</option>
-					</select>
-				</p>
+			</div>
+		</div>
 
-				<p class="select">
-					<select id="annee" name="annee">
-						<option value="annee" selected>Année</option>
-					</select>
-				</p>
-
-				<p>
-					<input type="submit" value="Valider" />
-					<input type="reset" value="Annuler">
-				</p>
-			</form>
-		</section>
-
-		<section class="liste">
-
-		</section>
   </main>
 
 
