@@ -8,7 +8,7 @@ html {
   background-color: #000c1a;
 }
 /* barre de navigation */
-nav {
+#navbar {
 
 
   background-color: #000;
@@ -340,4 +340,94 @@ footer .down {
 .down a {
   margin: 0 40px 0px 0;
   font-size: 1.5rem;
+}
+
+/* formulaire de contact */
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 999;
+    cursor: pointer;
+}
+
+#form-wrapper{
+
+  background: url('../img/backgroundform.gif');
+
+    position: absolute;
+    width: 60%;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    font-size: 2.5rem;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    border-radius: 7px;
+}
+#form-wrapper h3 {
+  text-align: center;
+  margin: 20px 0 50px 0;
+  font-size:4.5rem;
+}
+#contact-form {
+    background: #554d47 url(../img/contact-bkgd.jpg);
+    width: 70%;
+    height: 630px;
+    margin: 0 auto;
+}
+#form {
+    float: left;
+    width: 700px;
+  }
+  #form-wrapper .fas {
+    float: right;
+    margin-top: 10px;
+    color:white;
+  }
+.input-coord {
+  display: flex;
+
+}
+#name, #email {
+  width:300px;
+  height:50px;
+  border-radius: 10px;
+}
+.input-message {
+  display: flex;
+  flex-direction: column;
+  width:90%;
+}
+#form input {
+  margin: 10px 10px 20px 10px;
+}
+.input-name, .input-email, .input-message {
+  margin-left:10px;
+}
+.input-message{
+  margin-left: 20px;
+}
+#form p {
+  text-align: center;
+  margin-top: 20px;
+}
+#alignement {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+}
+#form-sidebar {
+  margin-right: 10px;
+}
+ul .fab {
+  color: white;
 }

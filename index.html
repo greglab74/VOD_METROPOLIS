@@ -18,6 +18,9 @@ $(document).ready(function(){
     $("#flip").click(function(){
         $("#panel").slideToggle("slow");
     });
+		$("#flip2").click(function(){
+        $("#panel2").slideToggle("slow");
+    });
 });
 </script>
 
@@ -25,7 +28,7 @@ $(document).ready(function(){
 	</head>
 
   <body>
-    <nav>
+    <nav id="navbar">
 			<div class="leftnav">
 				<a href="index.html"><img src="img/logometropolis.jpg" alt="Metropolis VOD" class="logo" /></a>
 	      <a href="listefilms.html" class="films">Films</a>
@@ -48,12 +51,12 @@ $(document).ready(function(){
 				</div>
 				<div class="">
 					<a href="buy.php" class="connexion">Connexion</a>
-		      <a href="buy.php" class="nouveaucompte">s'inscrire</a>
+		      <a id="flip2" class="nouveaucompte" href="#">s'inscrire</a>
 				</div>
 
 			</div>
     </nav>
-		<input id="panel" type="text" class="btn-extended" placeholder="Recherchez votre film par nom,réalisateur,acteur" />
+		<input id="panel" type="text" class="btn-extended" placeholder="Recherchez votre film par son titre,réalisateur,acteur" />
 		<div id="wrapper" style="margin-top:80px;">
 
 
@@ -111,6 +114,57 @@ $(document).ready(function(){
 			</ul>
 		</div>
 	</main>
+	<div id="overlay" >
+		<div id="form-wrapper">
+			<a href="#" onclick="off()" class="fas fa-times-circle"></a>
+			<h3>Formulaire de contact</h3>
+	<div id="alignement">
+	<form action="" accept-charset="utf-8" id="commentform" class="cmxform" method="post">
+
+			<div id="form">
+
+
+				<div class="input-coord">
+					<div class="input-name">
+					<label for="name">* Nom:</label><br>
+							<input name="name" id="name" class="required" type="text">
+							</div><!--end-->
+
+							<div class="input-email">
+							<label for="email">* Email:</label><br>
+							<input name="email" id="email" class="required" type="text">
+							</div><!--end-->
+				</div>
+
+
+						<div class="input-message">
+						<label for="message">Votre message:</label>
+						<textarea name="message" id="message" rows="10"></textarea>
+						</div><!--end-->
+
+				<p><input name="submit" class="submit" id="submit" value="Envoyer!" type="submit"></p>
+			</div> <!-- end form -->
+
+	</form>
+
+			<div id="form-sidebar">
+
+				<h4>METROPOLIS VOD</h4>
+				<p>6 Rue de longueville<br>
+				08000 Charleville-Mézières</p>
+
+
+				<ul>
+				<li id="contact-twitter"><a href="https://facebook.com" class="fab fa-facebook-square"></a></li>
+				<li id="contact-dribbble"><a href="https://twitter.com" class="fab fa-twitter-square"></a></li>
+				<li id="contact-flickr"><a href="http://www.instagram.com" class="fab fa-instagram"></a></li>
+				</ul>
+
+			</div> <!-- end form sidebar  -->
+</div>
+		</div><!-- end form wrapper -->
+
+</div>
 	<footer>
 		<div class="up">
 			<div class="films">
@@ -135,11 +189,10 @@ $(document).ready(function(){
 				<a href="index.html" class="fab fa-facebook-square"></a>
 				<a href="index.html" class="fab fa-twitter-square"></a>
 				<a href="index.html" class="fab fa-instagram"></a>
-				<a href="index.html" class="fas fa-search"></a>
 
 			</div>
 			<div class="contact">
-				<button type="button" name="button" class="bouton">CONTACT</button>
+				<button type="button" onclick="on()" name="button" class="bouton">CONTACT</button>
 			</div>
 		</div>
 		<div class="down">
@@ -151,5 +204,14 @@ $(document).ready(function(){
 		</div>
 	</footer>
   </body>
+	<script>
+function on() {
+    document.getElementById("overlay").style.display = "block";
 
+}
+
+function off() {
+    document.getElementById("overlay").style.display = "none";
+}
+</script>
 </html>
