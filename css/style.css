@@ -391,6 +391,11 @@ footer .down {
     float: right;
     margin-top: 10px;
     color:white;
+
+  }
+  #form-wrapper .fas:hover {
+    color: #000c1a;
+		transition: 0.7s;
   }
 .input-coord {
   display: flex;
@@ -413,7 +418,10 @@ footer .down {
   margin-left:10px;
 }
 .input-message{
-  margin-left: 20px;
+  margin: 20px;
+}
+#message {
+  margin: 10px;
 }
 #form p {
   text-align: center;
@@ -427,7 +435,16 @@ footer .down {
 }
 #form-sidebar {
   margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 ul .fab {
   color: white;
+margin-top: 15px;
+}
+ul .fab:hover {
+  color: #000c1a;
+  transition: 0.7s;
 }
