@@ -101,8 +101,7 @@ nav .films a {
 
 #wrapper{
   width:300px;
-  -webkit-perspective: 800;
-  -moz-perspective: 800;
+
   margin: 100px auto 0 auto;
 }
 
@@ -124,6 +123,7 @@ nav .films a {
   font-size: 8em;
   color:#FFF;
   background-color: rgba(0, 0, 0, 0.7);
+  transition: .5s;
 }
 
 @-webkit-keyframes Caroussel{
@@ -202,11 +202,19 @@ form input {
 }
 section ul{
   display: flex;
+  border-left: 5px solid black;
+  padding-left: 30px;
+  margin: 10px 10px 0 0px;
 
-  margin: 50px 0 100px 0;
 }
 section {
-  margin-right: 50px;
+  margin-right: 20px;
+}
+.liste ul{
+
+}
+.filtre option {
+  font-size: 2.5rem;
 }
 /* Main fichefilms*/
 #section1 {
@@ -352,9 +360,11 @@ footer .down {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.85);
     z-index: 999;
-    cursor: pointer;
+
+
+
 }
 
 #form-wrapper{
@@ -371,6 +381,8 @@ footer .down {
     transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
     border-radius: 7px;
+
+
 }
 #form-wrapper h3 {
   text-align: center;
@@ -378,7 +390,7 @@ footer .down {
   font-size:4.5rem;
 }
 #contact-form {
-    background: #554d47 url(../img/contact-bkgd.jpg);
+
     width: 70%;
     height: 630px;
     margin: 0 auto;
@@ -447,4 +459,61 @@ margin-top: 15px;
 ul .fab:hover {
   color: #000c1a;
   transition: 0.7s;
+}
+
+/* Page admin */
+.formulaireadmin {
+background: black;
+  width:60%;
+  margin-left: auto;
+  margin-right: auto;
+  border:2px solid white;
+  border-radius: 10px;
+}
+.formulaireadmin label {
+  font-size: 4rem;
+  color: white;
+  text-align: center;
+}
+.formulaireadmin h2{
+  text-align: center;
+  margin: 30px 0 30px 0;
+  font-size: 5rem;
+}
+.formulaireadmin form{
+  margin: 20px 50px 20px 50px;
+  text-align: left;
+}
+.formulaireadmin li{
+display: flex;
+width:100%;
+justify-content: space-between;
+margin: 10px 0 10px 0;
+
+}
+.formulaireadmin input, .formulaireadmin select{
+margin: 0 0 0 0;
+width:100%;
+font-size: 3rem;
+}
+.formulaireadmin option {
+  font-size: 2.5rem;
+}
+#synopsis {
+  font-size: 3rem;
+  font-family: 'exo';
+}
+#synop {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.formulaireadmin form {
+  display: flex;
+  flex-direction: column;
+}
+.formulaireadmin button {
+  width:40%;
+  margin: 20px auto 30px auto;
+  font-size: 2.5rem;
 }

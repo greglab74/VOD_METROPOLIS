@@ -57,63 +57,58 @@ $(document).ready(function(){
 			</div>
     </nav>
 		<input id="panel" type="text" class="btn-extended" placeholder="Recherchez votre film par son titre,réalisateur,acteur" />
-  <main>
-		<div id="listefilms">
-			<section class="filtre">
-				<form action="#" method="post">
-					<p class="select">
-						<select id="genre" name="genre">
-							<option value="none" selected>Genre</option>
-							<option value="1">Action</option>
-							<option value="2">Comédie</option>
-							<option value="3">Aventure</option>
-							<option value="4">Science-fiction</option>
-							<option value="5">Humour</option>
-							<option value="6">Fantastique</option>
-							<option value="7">Jeunesse</option>
-							<option value="8">Animation</option>
-						</select>
-					</p>
 
-					<p class="select">
-						<select id="realisateur" name="realisateur">
-							<option value="none" selected>Réalisateur</option>
-						</select>
-					</p>
+	<main>
 
-					<p class="select">
-						<select id="acteur" name="acteur">
-							<option value="none" selected>Acteur</option>
-						</select>
-					</p>
-
-					<p class="select">
-						<select id="annee" name="annee">
-							<option value="annee" selected>Année</option>
-						</select>
-					</p>
-
-					<p>
-						<input type="submit" value="Valider" />
-						<input type="reset" value="Annuler">
-					</p>
-				</form>
-			</section>
-
-			<section class="liste">
+		<div class="formulaireadmin">
+			<h2>INTERFACE ADMINISTRATEUR</h2>
+			<form class="" action="traitadmin.php" method="post">
 				<ul>
-					<li><a href="index.html"><img src="img/1.jpeg" alt="Metropolis VOD" class="pres1" /></a><p class="fontroger">Titre</p></li>
-					<li><a href="index.html"><img src="img/2.jpeg" alt="Metropolis VOD" class="pres1" /></a><p class="fontroger">Titre</p></li>
-					<li><a href="index.html"><img src="img/3.jpeg" alt="Metropolis VOD" class="pres1" /></a><p class="fontroger">Titre</p></li>
-					<li><a href="index.html"><img src="img/4.jpeg" alt="Metropolis VOD" class="pres1" /></a><p class="fontroger">Titre</p></li>
-					<li><a href="index.html"><img src="img/5.jpeg" alt="Metropolis VOD" class="pres1" /></a><p class="fontroger">Titre</p></li>
-					<li><a href="index.html"><img src="img/6.jpeg" alt="Metropolis VOD" class="pres1" /></a><p class="fontroger">Titre</p></li>
-					<li><a href="index.html"><img src="img/7.jpeg" alt="Metropolis VOD" class="pres1" /></a><p class="fontroger">Titre</p></li>
+					<li>
+						<div><label for="film"><span>Nom Film :</span></div>
+						<div><input id="film" name="film" type="text" size="28" required></div>
+					</li>
+					<li>
+						<div class=""><label for="genre"><span>Genre :</span></div>
+						<div class="">
+							<select id="genre" name="genre">
+										<option value="none" selected>Genre</option>
+										<option value="Action">Action</option>
+										<option value="comedie">Comédie</option>
+										<option value="Aventure">Aventure</option>
+										<option value="Sci-fi">Sci-fi</option>
+										<option value="Humour">Humour</option>
+										<option value="Fantastique">Fantastique</option>
+										<option value="Jeunesse">Jeunesse</option>
+										<option value="Animation">Animation</option>
+									</select>
+							</div>
+					</li>
+					<li>
+						<div class=""><label for="annee"><span>Année :</span></div>
+						<div class=""><input id="annee" name="annee" type="text" size="28" required></div>
+					</li>
+					<li>
+							<div class=""><label for="realisateur"><span>Réalisateur(s) :</span></div>
+							<div class=""><input id="realisateur" name="realisateur" type="text" size="28" required></div>
+					</li>
+					<li>
+						<div class=""><label for="acteurs"><span>acteur(s) :</span></div>
+						<div class=""><input id="acteurs" name="acteurs" type="text" size="28" required></div>
+					</li>
+					<li id="synop">
+						<div class=""><label for="synopsis"><span>Synopsis :</span></div>
+						<div class=""><textarea id="synopsis" name="synopsis" placeholder="" type="text" cols="45" rows="6" required></textarea></div>
+					</li>
 				</ul>
-			</section>
+				<button class="pulse" type="submit">Envoyer</button>
+			</form>
 		</div>
 
-  </main>
+
+
+
+	</main>
 	<div id="overlay" >
 		<div id="form-wrapper">
 			<a href="#" onclick="off()" class="fas fa-times-circle"></a>

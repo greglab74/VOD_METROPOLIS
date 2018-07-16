@@ -12,22 +12,26 @@
 
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 		<script>
-	$(document).ready(function(){
-		$("#flip").click(function(){
-				$("#panel").slideToggle("slow");
-		});
-	});
-	</script>
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+		$("#flip2").click(function(){
+        $("#panel2").slideToggle("slow");
+    });
+});
+</script>
 
 		<title>METROPOLIS VOD</title>
 	</head>
 
-	<body>
-		<nav>
+  <body>
+    <nav id="navbar">
 			<div class="leftnav">
 				<a href="index.html"><img src="img/logometropolis.jpg" alt="Metropolis VOD" class="logo" /></a>
-				<a href="listefilms.html" class="films">Films</a>
+	      <a href="listefilms.html" class="films">Films</a>
 				<div class="searchbar">
 
 						<a id="flip" class="fas fa-search" href="#"></a>
@@ -37,22 +41,22 @@
 
 
 
-		</div>
+    </div>
 			</div>
 
 			<div class="connexion">
 				<div class="">
 					<input type="text" name="identifiant" placeholder="identifiant">
-					<input type="text" name="password" placeholder="mot de passe">
+		      <input type="text" name="password" placeholder="mot de passe">
 				</div>
 				<div class="">
 					<a href="buy.php" class="connexion">Connexion</a>
-					<a id="flip" href="#" class="nouveaucompte">s'inscrire</a>
+		      <a id="flip2" class="nouveaucompte" href="#">s'inscrire</a>
 				</div>
 
 			</div>
-		</nav>
-		<input id="panel" type="text" class="btn-extended" placeholder="Recherchez votre film par nom,réalisateur,acteur" />
+    </nav>
+		<input id="panel" type="text" class="btn-extended" placeholder="Recherchez votre film par son titre,réalisateur,acteur" />
   <main>
 		<div id="section1">
 			<div class="aff">
@@ -80,8 +84,57 @@
 		</div>
 
   </main>
+	<div id="overlay" >
+		<div id="form-wrapper">
+			<a href="#" onclick="off()" class="fas fa-times-circle"></a>
+			<h3>Formulaire de contact</h3>
+	<div id="alignement">
+	<form action="" accept-charset="utf-8" id="commentform" class="cmxform" method="post">
+
+			<div id="form">
 
 
+				<div class="input-coord">
+					<div class="input-name">
+					<label for="name">* Nom:</label><br>
+							<input name="name" id="name" class="required" type="text">
+							</div><!--end-->
+
+							<div class="input-email">
+							<label for="email">* Email:</label><br>
+							<input name="email" id="email" class="required" type="text">
+							</div><!--end-->
+				</div>
+
+
+						<div class="input-message">
+						<label for="message">Votre message:</label>
+						<textarea name="message" id="message" rows="10"></textarea>
+						</div><!--end-->
+
+				<p><input name="submit" class="submit" id="submit" value="Envoyer!" type="submit"></p>
+			</div> <!-- end form -->
+
+	</form>
+
+			<div id="form-sidebar">
+
+				<h4>METROPOLIS VOD</h4>
+				<p>6 Rue de longueville<br>
+				08000 Charleville-Mézières</p>
+
+
+				<ul>
+				<li id="contact-twitter"><a href="https://facebook.com" class="fab fa-facebook-square" target="blank"></a></li>
+				<li id="contact-dribbble"><a href="https://twitter.com" class="fab fa-twitter-square" target="blank"></a></li>
+				<li id="contact-flickr"><a href="http://www.instagram.com" class="fab fa-instagram" target="blank"></a></li>
+				</ul>
+
+			</div> <!-- end form sidebar  -->
+</div>
+		</div><!-- end form wrapper -->
+
+</div>
 	<footer>
 		<div class="up">
 			<div class="films">
@@ -103,12 +156,13 @@
 			</div>
 
 			<div class="reso">
-				<a href="index.html" class="fab fa-facebook-square"></a>
-				<a href="index.html" class="fab fa-twitter-square"></a>
-				<a href="index.html" class="fab fa-instagram"></a>
+				<a href="https://facebook.com" class="fab fa-facebook-square" target="blank"></a>
+				<a href="https://twitter.com" class="fab fa-twitter-square" target="blank"></a>
+				<a href="http://www.instagram.com" class="fab fa-instagram" target="blank"></a>
+
 			</div>
 			<div class="contact">
-				<button type="button" name="button" class="bouton">CONTACT</button>
+				<button type="button" onclick="on()" name="button" class="bouton">CONTACT</button>
 			</div>
 		</div>
 		<div class="down">
@@ -120,5 +174,15 @@
 		</div>
 	</footer>
   </body>
+	<script>
+function on() {
+    $('#overlay').fadeIn(1000);
 
+}
+
+function off() {
+		$('#overlay').fadeOut(700);
+
+}
+</script>
 </html>

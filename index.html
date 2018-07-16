@@ -155,9 +155,9 @@ $(document).ready(function(){
 
 
 				<ul>
-				<li id="contact-twitter"><a href="https://facebook.com" class="fab fa-facebook-square"></a></li>
-				<li id="contact-dribbble"><a href="https://twitter.com" class="fab fa-twitter-square"></a></li>
-				<li id="contact-flickr"><a href="http://www.instagram.com" class="fab fa-instagram"></a></li>
+				<li id="contact-twitter"><a href="https://facebook.com" class="fab fa-facebook-square" target="blank"></a></li>
+				<li id="contact-dribbble"><a href="https://twitter.com" class="fab fa-twitter-square" target="blank"></a></li>
+				<li id="contact-flickr"><a href="http://www.instagram.com" class="fab fa-instagram" target="blank"></a></li>
 				</ul>
 
 			</div> <!-- end form sidebar  -->
@@ -186,9 +186,9 @@ $(document).ready(function(){
 			</div>
 
 			<div class="reso">
-				<a href="index.html" class="fab fa-facebook-square"></a>
-				<a href="index.html" class="fab fa-twitter-square"></a>
-				<a href="index.html" class="fab fa-instagram"></a>
+				<a href="https://facebook.com" class="fab fa-facebook-square" target="blank"></a>
+				<a href="https://twitter.com" class="fab fa-twitter-square" target="blank"></a>
+				<a href="http://www.instagram.com" class="fab fa-instagram" target="blank"></a>
 
 			</div>
 			<div class="contact">
@@ -206,12 +206,13 @@ $(document).ready(function(){
   </body>
 	<script>
 function on() {
-    document.getElementById("overlay").style.display = "block";
+    $('#overlay').fadeIn(1000);
 
 }
 
 function off() {
-    document.getElementById("overlay").style.display = "none";
+		$('#overlay').fadeOut(700);
+
 }
 </script>
 </html>
