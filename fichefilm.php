@@ -59,9 +59,55 @@
 	</nav>
 	<input id="panel" type="text" class="btn-extended" placeholder="Recherchez votre film par son titre,réalisateur,acteur" />
 	<main>
+
+
+		<?php
+
+		###########################################
+		############ PDO-Extension #############
+		###########################################
+
+		$serveur = 'localhost';
+
+		$login = 'root';
+
+		$mot_de_passe = '1';
+
+		$nom_bd = 'vodmetropolis';
+
+
+		$dbh = null;
+		try {
+		  $dbh = new PDO("mysql:host=$serveur; dbname=$nom_bd;", $login, $mot_de_passe);
+			$dbh->exec("SET CHARACTER SET utf8");
+		} catch (PDOException $e) {
+		  echo "Erreur!: " . $e->getMessage() . "<br/>";
+		  die();
+		}
+
+		$reponse = $dbh->query('SELECT nom FROM acteurs NATURAL JOIN joue NATURAL JOIN films WHERE ID_films = 1');
+		$reponse2 = $dbh->query('SELECT * FROM films');
+		$reponse3 = $dbh->query('SELECT * FROM films');
+		$reponse4 = $dbh->query('SELECT nom FROM genre NATURAL JOIN A NATURAL JOIN films WHERE ID_films = 1');
+		$reponse5 = $dbh->query('SELECT nom FROM realisateurs NATURAL JOIN realise NATURAL JOIN films WHERE ID_films = 1');
+
+
+
+
+		$donnees2 = $reponse2->fetch();
+		$donnees3 = $reponse3->fetch();
+		$donnees4 = $reponse4->fetch();
+		$donnees5 = $reponse5->fetch();
+
+		?>
+
+
+
+
+
 		<div id="section1">
 			<div class="aff">
-				<a href="index.html"><img src="img/1.jpeg" alt="Metropolis VOD" class="affichefilm" /></a>
+				<a href="index.html"><img src="<?php echo $donnees2['affiche']; ?>" alt="Metropolis VOD" class="affichefilm" /></a>
 			</div>
 			<div class="bandeannonce">
 				<p>BANDE ANNONCE</p>
@@ -71,20 +117,24 @@
 
 
 			<div class="titrefilm">
-				<h3>TITRE</h3>
+				<h3><?php echo $donnees2['titre']; ?></h3>
 			</div>
 			<div class="genrefilm">
-				<h3>Genre:</h3>
+				<h3>Genre: <?php echo $donnees4['nom']; ?></h3>
+			</div>
+			<div class="realisateur">
+				<h3>réalisateur: <?php echo $donnees5['nom']; ?></h3>
+			</div>
+
+
+			<div class="acteurs">
+
+				<h3>Acteurs: <?php while ($donnees = $reponse->fetch())
+		{echo $donnees['nom'], ", "; }?></h3>
 			</div>
 			<div class="scenario">
 				<h3>Synopsis:</h3>
-				<p>A la suite d’un accident de parapente, Philippe, riche aristocrate, engage comme aide à domicile Driss, un jeune de banlieue tout juste sorti de prison. Bref la personne la moins adaptée pour le job. Ensemble ils vont faire cohabiter Vivaldi et Earth
-					Wind and Fire, le verbe et la vanne, les costumes et les bas de survêtement... Deux univers vont se télescoper, s’apprivoiser, pour donner naissance à une amitié aussi dingue, drôle et forte qu’inattendue, une relation unique qui fera des étincelles
-					et qui les rendra... Intouchables. </p>
-			</div>
-			<div class="acteurs">
-				<h3>réalisateur:+++++++++</h3>
-				<h3>Acteurs:++++++++</h3>
+				<p><?php echo $donnees3['synopsis']?></p>
 			</div>
 			<div class="avis">
 
@@ -93,7 +143,11 @@
 
 			</div>
 		</div>
+		<?php
 
+		$reponse->closeCursor(); // Termine le traitement de la requête
+
+		?>
 	</main>
 	<div id="overlay">
 		<div id="form-wrapper">

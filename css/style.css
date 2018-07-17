@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Exo');
-
 html {
   width: 100%;
   min-height: 100%;
@@ -7,10 +6,10 @@ html {
   font-family: 'Exo', sans-serif;
   background-color: #000c1a;
 }
+
 /* barre de navigation */
+
 #navbar {
-
-
   background-color: #000;
   position: sticky;
   top: 0px;
@@ -21,7 +20,6 @@ html {
 }
 
 .connexion a, nav img {
-
   font-size: 2.5rem;
   line-height: 60px;
   color: #FFF;
@@ -29,14 +27,15 @@ html {
   text-decoration: none;
   font-family: 'Exo', sans-serif;
 }
+
 .leftnav a {
   font-size: 4rem;
   line-height: 60px;
   color: #FFF;
   margin: 0 10px;
   text-decoration: none;
-
 }
+
 nav a:hover {
   color: #0063CD;
   transition: .5s;
@@ -48,13 +47,10 @@ nav a:hover .tel {
 }
 
 nav .connexion {
-
   float: right;
   display: flex;
   flex-direction: column;
   flex-direction: center;
-
-
 }
 
 nav .logo {
@@ -67,45 +63,47 @@ nav .tel {
   height: 25px;
   margin: 37.7px 7px 0;
 }
-nav .connexion, .nouveaucompte {
 
+nav .connexion, .nouveaucompte {}
 
-}
 nav input {
   margin: 5px 0px 5px 0px;
   min-height: 30px;
 }
+
 nav .films a {
   font-size: 4rem;
 }
+
 .leftnav {
   float: left;
   display: flex;
   justify-content: space-between;
-  width:68%;
+  width: 68%;
   align-items: center;
 }
+
 #panel {
-    padding: 5px;
-    text-align: center;
-    background-color: white;
-    border: solid 1px #c3c3c3;
+  padding: 5px;
+  text-align: center;
+  background-color: white;
+  border: solid 1px #c3c3c3;
 }
 
 #panel {
-    padding: 30px;
-    display: none;
-    width:100%;
+  padding: 30px;
+  display: none;
+  width: 100%;
 }
+
 /* CAROUSSEL */
 
-#wrapper{
-  width:300px;
-
+#wrapper {
+  width: 300px;
   margin: 100px auto 0 auto;
 }
 
-.carrousel{
+.carrousel {
   width: 300px;
   height: 300px;
   margin: 0 auto;
@@ -115,146 +113,213 @@ nav .films a {
   -moz-animation: Caroussel 20s infinite linear;
 }
 
-.plan{
-  position:absolute;
+.plan {
+  position: absolute;
   height: 400px;
   width: 300px;
-  text-align:center;
+  text-align: center;
   font-size: 8em;
-  color:#FFF;
+  color: #FFF;
   background-color: rgba(0, 0, 0, 0.7);
   transition: .5s;
 }
 
-@-webkit-keyframes Caroussel{
-
-  from { -webkit-transform: rotateY(0); }
-  to { -webkit-transform: rotateY(-360deg); }
+@-webkit-keyframes Caroussel {
+  from {
+    -webkit-transform: rotateY(0);
+  }
+  to {
+    -webkit-transform: rotateY(-360deg);
+  }
 }
 
-@-moz-keyframes Caroussel{
-
-  from { -moz-transform: rotateY(0); }
-  to { -moz-transform: rotateY(-360deg); }
+@-moz-keyframes Caroussel {
+  from {
+    -moz-transform: rotateY(0);
+  }
+  to {
+    -moz-transform: rotateY(-360deg);
+  }
 }
+
 .affiche {
-  width:300px;
-  height:400px;
+  width: 300px;
+  height: 400px;
 }
 
+.p1 {
+  -webkit-transform: translateZ(400px);
+}
 
-.p1{ -webkit-transform: translateZ(400px);}
-.p2{ -webkit-transform: rotateY(45deg) translateZ(400px);}
-.p3{ -webkit-transform: rotateY(90deg) translateZ(400px);}
-.p4{ -webkit-transform: rotateY(135deg) translateZ(400px);}
-.p5{ -webkit-transform: rotateY(180deg) translateZ(400px);}
-.p6{ -webkit-transform: rotateY(225deg) translateZ(400px);}
-.p7{ -webkit-transform: rotateY(270deg) translateZ(400px);}
-.p8{ -webkit-transform: rotateY(315deg) translateZ(400px);}
+.p2 {
+  -webkit-transform: rotateY(45deg) translateZ(400px);
+}
 
-.p1{ -moz-transform: translateZ(400px);}
-.p2{ -moz-transform: rotateY(45deg) translateZ(400px);}
-.p3{ -moz-transform: rotateY(90deg) translateZ(400px);}
-.p4{ -moz-transform: rotateY(135deg) translateZ(400px);}
-.p5{ -moz-transform: rotateY(180deg) translateZ(400px);}
-.p6{ -moz-transform: rotateY(225deg) translateZ(400px);}
-.p7{ -moz-transform: rotateY(270deg) translateZ(400px);}
-.p8{ -moz-transform: rotateY(315deg) translateZ(400px);}
+.p3 {
+  -webkit-transform: rotateY(90deg) translateZ(400px);
+}
 
+.p4 {
+  -webkit-transform: rotateY(135deg) translateZ(400px);
+}
+
+.p5 {
+  -webkit-transform: rotateY(180deg) translateZ(400px);
+}
+
+.p6 {
+  -webkit-transform: rotateY(225deg) translateZ(400px);
+}
+
+.p7 {
+  -webkit-transform: rotateY(270deg) translateZ(400px);
+}
+
+.p8 {
+  -webkit-transform: rotateY(315deg) translateZ(400px);
+}
+
+.p1 {
+  -moz-transform: translateZ(400px);
+}
+
+.p2 {
+  -moz-transform: rotateY(45deg) translateZ(400px);
+}
+
+.p3 {
+  -moz-transform: rotateY(90deg) translateZ(400px);
+}
+
+.p4 {
+  -moz-transform: rotateY(135deg) translateZ(400px);
+}
+
+.p5 {
+  -moz-transform: rotateY(180deg) translateZ(400px);
+}
+
+.p6 {
+  -moz-transform: rotateY(225deg) translateZ(400px);
+}
+
+.p7 {
+  -moz-transform: rotateY(270deg) translateZ(400px);
+}
+
+.p8 {
+  -moz-transform: rotateY(315deg) translateZ(400px);
+}
 
 /* Main index*/
+
 main {
   margin: 200px 50px 100px 50px;
-
 }
+
 main h2 {
   font-size: 4rem;
   font-family: 'Exo', sans-serif;
   color: white;
 }
-.nouveautes ul, .anepasmanquer ul, .pourfamille ul{
-  display: flex;
 
+.nouveautes ul, .anepasmanquer ul, .pourfamille ul {
+  display: flex;
   margin: 50px 0 100px 0;
 }
-main ul {
-text-align: center;
-flex-wrap: wrap;
-}
-main li {
 
+main ul {
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+main li {
   margin: 15px 20px 0 0;
 }
+
 main p {
   font-size: 1.5rem;
   margin-top: 10px;
-  color:white;
+  color: white;
 }
+
 /* Main listefilms*/
+
 .select {
-  margin:60px 10px 0 10px;
+  margin: 60px 10px 0 10px;
 }
+
 form input {
   margin: 40px 10px 0 0;
 }
+
 #listefilms {
   display: flex;
 }
-section ul{
+
+section ul {
   display: flex;
   border-left: 5px solid black;
   padding-left: 30px;
   margin: 10px 10px 0 0px;
-
 }
+
 section {
   margin-right: 20px;
 }
-.liste ul{
 
-}
+.liste ul {}
+
 .filtre option {
   font-size: 2.5rem;
 }
+
 /* Main fichefilms*/
+
 #section1 {
   display: flex;
   margin-top: 100px;
 }
- #section2 {
-   margin: 100px 0 100px 0;
- }
+
+#section2 {
+  margin: 100px 0 100px 0;
+}
+
 .affichefilm {
-  width:400px;
+  width: 400px;
   margin-left: 50px;
-  }
-  .bandeannonce {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 50px;
-  }
-.scenario {
-  width:100%;
+}
+
+.bandeannonce {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.scenario, .titrefilm, .genrefilm, .realisateur, .acteurs {
+  width: 100%;
   margin-bottom: 30px;
 }
-.scenario h3, .acteurs h3 {
+
+.titrefilm h3, .genrefilm h3, .scenario h3, .acteurs h3, .realisateur h3 {
   color: white;
   font-size: 4rem;
   margin-left: 50px;
 }
+
 .scenario p {
   font-size: 2.5rem;
   margin-left: 50px;
 }
 
-
 /* footer */
+
 footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width:100%;
+  width: 100%;
   background-color: #000;
   padding: 0 20px;
   height: 300px;
@@ -289,162 +354,175 @@ footer img:hover {
 main {
   min-height: calc(100vh - 70px - 100px);
 }
+
 .up {
   display: flex;
   flex-direction: column;
 }
-footer .up {
 
-  width:100%;
+footer .up {
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
 }
+
 footer .films {
-  width:300px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 15px 0 0 0;
 }
+
 .films h3 a {
   font-size: 4rem;
   font-weight: normal;
-
 }
+
 footer .genre {
   display: flex;
   justify-content: center;
 }
+
 footer .rang {
   margin-right: 20px;
   margin-left: 20px;
-
 }
+
 footer a:hover {
   color: #0063CD;
   transition: .5s;
 }
+
 .fab, .fas {
   letter-spacing: 30px;
   text-decoration: none;
   font-size: 5rem;
   margin-right: : 25px;
-
 }
+
 .bouton {
   font-size: 2rem;
 }
+
 .bouton:hover {
   background: #0063CD;
-  color:black;
+  color: black;
   transition: .5s;
 }
+
 footer .down {
   display: flex;
   justify-content: center;
 }
+
 .down a {
   margin: 0 40px 0px 0;
   font-size: 1.5rem;
 }
 
 /* formulaire de contact */
+
 #overlay {
-    position: fixed;
-    display: none;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.85);
-    z-index: 999;
-
-
-
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 999;
 }
 
-#form-wrapper{
-
+#form-wrapper {
   background: url('../img/backgroundform.gif');
-
-    position: absolute;
-    width: 60%;
-    height: 70%;
-    top: 50%;
-    left: 50%;
-    font-size: 2.5rem;
-    color: white;
-    transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    border-radius: 7px;
-
-
+  position: absolute;
+  width: 60%;
+  height: 70%;
+  top: 50%;
+  left: 50%;
+  font-size: 2.5rem;
+  color: white;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  border-radius: 7px;
 }
+
 #form-wrapper h3 {
   text-align: center;
   margin: 20px 0 50px 0;
-  font-size:4.5rem;
+  font-size: 4.5rem;
 }
+
 #contact-form {
-
-    width: 70%;
-    height: 630px;
-    margin: 0 auto;
+  width: 70%;
+  height: 630px;
+  margin: 0 auto;
 }
-#form {
-    float: left;
-    width: 700px;
-  }
-  #form-wrapper .fas {
-    float: right;
-    margin-top: 10px;
-    color:white;
 
-  }
-  #form-wrapper .fas:hover {
-    color: #000c1a;
-		transition: 0.7s;
-  }
+#form {
+  float: left;
+  width: 700px;
+}
+
+#form-wrapper .fas {
+  float: right;
+  margin-top: 10px;
+  color: white;
+}
+
+#form-wrapper .fas:hover {
+  color: #000c1a;
+  transition: 0.7s;
+}
+
 .input-coord {
   display: flex;
-
 }
+
 #name, #email {
-  width:300px;
-  height:50px;
+  width: 300px;
+  height: 50px;
   border-radius: 10px;
 }
+
 .input-message {
   display: flex;
   flex-direction: column;
-  width:90%;
+  width: 90%;
 }
+
 #form input {
   margin: 10px 10px 20px 10px;
 }
+
 .input-name, .input-email, .input-message {
-  margin-left:10px;
+  margin-left: 10px;
 }
-.input-message{
+
+.input-message {
   margin: 20px;
 }
+
 #message {
   margin: 10px;
 }
+
 #form p {
   text-align: center;
   margin-top: 20px;
 }
+
 #alignement {
   display: flex;
   flex-direction: row;
   width: 100%;
-
 }
+
 #form-sidebar {
   margin-right: 10px;
   display: flex;
@@ -452,68 +530,80 @@ footer .down {
   justify-content: center;
   align-items: center;
 }
+
 ul .fab {
   color: white;
-margin-top: 15px;
+  margin-top: 15px;
 }
+
 ul .fab:hover {
   color: #000c1a;
   transition: 0.7s;
 }
 
 /* Page admin */
+
 .formulaireadmin {
-background: black;
-  width:60%;
+  background: black;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
-  border:2px solid white;
+  border: 2px solid white;
   border-radius: 10px;
 }
+
 .formulaireadmin label {
   font-size: 4rem;
   color: white;
   text-align: center;
 }
-.formulaireadmin h2{
+
+.formulaireadmin h2 {
   text-align: center;
   margin: 30px 0 30px 0;
   font-size: 5rem;
 }
-.formulaireadmin form{
+
+.formulaireadmin form {
   margin: 20px 50px 20px 50px;
   text-align: left;
 }
-.formulaireadmin li{
-display: flex;
-width:100%;
-justify-content: space-between;
-margin: 10px 0 10px 0;
 
+.formulaireadmin li {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 10px 0 10px 0;
 }
-.formulaireadmin input, .formulaireadmin select{
-margin: 0 0 0 0;
-width:100%;
-font-size: 3rem;
+
+.formulaireadmin input, .formulaireadmin select {
+  margin: 0 0 0 0;
+  width: 100%;
+  font-size: 3rem;
 }
+
 .formulaireadmin option {
   font-size: 2.5rem;
 }
+
 #synopsis {
   font-size: 3rem;
   font-family: 'exo';
 }
+
 #synop {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
+
 .formulaireadmin form {
   display: flex;
   flex-direction: column;
 }
+
 .formulaireadmin button {
-  width:40%;
+  width: 40%;
   margin: 20px auto 30px auto;
   font-size: 2.5rem;
 }
