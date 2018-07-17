@@ -99,6 +99,10 @@
 		$donnees4 = $reponse4->fetch();
 		$donnees5 = $reponse5->fetch();
 
+
+		$adresse = $_SERVER['REQUEST_URI'];
+		$identitefilm = substr($adresse, strpos($adresse, "&")+1, strpos($adresse, ".php")-strlen($adresse));
+
 		?>
 
 
@@ -117,7 +121,11 @@
 
 
 			<div class="titrefilm">
-				<h3><?php echo $donnees2['titre']; ?></h3>
+				<h3><?php echo $donnees2['titre'];  echo $identitefilm; ?><?php
+
+
+
+?></h3>
 			</div>
 			<div class="genrefilm">
 				<h3>Genre: <?php echo $donnees4['nom']; ?></h3>
