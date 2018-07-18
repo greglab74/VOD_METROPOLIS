@@ -84,9 +84,7 @@
 		  die();
 		}
 
-		$adresse = $_SERVER['REQUEST_URI'];
-		$identite = substr($adresse, strpos($adresse, "&")+1, strpos($adresse, ".php")-strlen($adresse));
-		$identitefilm = print_r($identite);
+
 		$reponse = $dbh->query('SELECT ID_films FROM films');
 
 
@@ -142,29 +140,12 @@
 
 			<section class="liste">
 				<ul>
-					<?php while ($donnees = $reponse->fetch())
-			{echo  $donnees['prenom'], " ",$donnees['nom'], " "; }?>
-					<li><a href="./fichefilm-&1.php"><img src="img/1.jpeg" alt="Metropolis VOD" class="pres1" /></a>
+					<?php while ($a = $reponse->fetch())
+			{ ?>
+					<li><a href="./fichefilm-&<?php echo $a['ID_films'];?>.php"><img src="img/<?php echo $a['ID_films'];?>.jpeg" alt="Metropolis VOD" class="pres1" /></a>
 						<p class="fontroger">Titre</p>
-					</li>
-					<li><a href="./fichefilm-&2.php"><img src="img/2.jpeg" alt="Metropolis VOD" class="pres1" /></a>
-						<p class="fontroger">Titre</p>
-					</li>
-					<li><a href="./fichefilm-&3.php"><img src="img/3.jpeg" alt="Metropolis VOD" class="pres1" /></a>
-						<p class="fontroger">Titre</p>
-					</li>
-					<li><a href="./film-4"><img src="img/4.jpeg" alt="Metropolis VOD" class="pres1" /></a>
-						<p class="fontroger">Titre</p>
-					</li>
-					<li><a href="./film-5"><img src="img/5.jpeg" alt="Metropolis VOD" class="pres1" /></a>
-						<p class="fontroger">Titre</p>
-					</li>
-					<li><a href="./film-6"><img src="img/6.jpeg" alt="Metropolis VOD" class="pres1" /></a>
-						<p class="fontroger">Titre</p>
-					</li>
-					<li><a href="./film-7"><img src="img/7.jpeg" alt="Metropolis VOD" class="pres1" /></a>
-						<p class="fontroger">Titre</p>
-					</li>
+					</li><?php } ?>
+
 				</ul>
 			</section>
 		</div>
