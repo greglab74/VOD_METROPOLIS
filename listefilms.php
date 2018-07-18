@@ -59,6 +59,45 @@
 	</nav>
 	<input id="panel" type="text" class="btn-extended" placeholder="Recherchez votre film par son titre,réalisateur,acteur" />
 	<main>
+
+		<?php
+
+		###########################################
+		############ PDO-Extension #############
+		###########################################
+
+		$serveur = 'localhost';
+
+		$login = 'root';
+
+		$mot_de_passe = '1';
+
+		$nom_bd = 'vodmetropolis';
+
+
+		$dbh = null;
+		try {
+		  $dbh = new PDO("mysql:host=$serveur; dbname=$nom_bd;", $login, $mot_de_passe);
+			$dbh->exec("SET CHARACTER SET utf8");
+		} catch (PDOException $e) {
+		  echo "Erreur!: " . $e->getMessage() . "<br/>";
+		  die();
+		}
+
+		$adresse = $_SERVER['REQUEST_URI'];
+		$identite = substr($adresse, strpos($adresse, "&")+1, strpos($adresse, ".php")-strlen($adresse));
+		$identitefilm = print_r($identite);
+		$reponse = $dbh->query('SELECT ID_films FROM films');
+
+
+
+
+
+
+
+		?>
+
+
 		<div id="listefilms">
 			<section class="filtre">
 				<form action="#" method="post">
@@ -103,6 +142,8 @@
 
 			<section class="liste">
 				<ul>
+					<?php while ($donnees = $reponse->fetch())
+			{echo  $donnees['prenom'], " ",$donnees['nom'], " "; }?>
 					<li><a href="./fichefilm-&1.php"><img src="img/1.jpeg" alt="Metropolis VOD" class="pres1" /></a>
 						<p class="fontroger">Titre</p>
 					</li>
