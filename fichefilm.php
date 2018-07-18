@@ -85,12 +85,15 @@
 		  die();
 		}
 
-		$reponse = $dbh->query('SELECT nom FROM acteurs NATURAL JOIN joue NATURAL JOIN films WHERE ID_films = 1');
-		$reponse2 = $dbh->query('SELECT * FROM films');
-		$reponse3 = $dbh->query('SELECT * FROM films');
-		$reponse4 = $dbh->query('SELECT nom FROM genre NATURAL JOIN A NATURAL JOIN films WHERE ID_films = 1');
-		$reponse5 = $dbh->query('SELECT nom FROM realisateurs NATURAL JOIN realise NATURAL JOIN films WHERE ID_films = 1');
-
+		$adresse = $_SERVER['REQUEST_URI'];
+		$identite = substr($adresse, strpos($adresse, "&")+1, strpos($adresse, ".php")-strlen($adresse));
+		$identitefilm = print_r($identite);
+		$reponse = $dbh->query('SELECT nom FROM acteurs NATURAL JOIN joue NATURAL JOIN films WHERE ID_films = "'.$identite.'"');
+		$reponse2 = $dbh->query('SELECT titre FROM films WHERE ID_films = "'.$identite.'"');
+		$reponse3 = $dbh->query('SELECT affiche FROM films WHERE ID_films = "'.$identite.'"');
+		$reponse4 = $dbh->query('SELECT nom FROM genre NATURAL JOIN A NATURAL JOIN films WHERE ID_films = "'.$identite.'"');
+		$reponse5 = $dbh->query('SELECT nom FROM realisateurs NATURAL JOIN realise NATURAL JOIN films WHERE ID_films = "'.$identite.'"');
+		$reponse6 = $dbh->query('SELECT synopsis FROM films WHERE ID_films = "'.$identite.'"');
 
 
 
@@ -98,10 +101,9 @@
 		$donnees3 = $reponse3->fetch();
 		$donnees4 = $reponse4->fetch();
 		$donnees5 = $reponse5->fetch();
+		$donnees6 = $reponse6->fetch();
 
 
-		$adresse = $_SERVER['REQUEST_URI'];
-		$identitefilm = substr($adresse, strpos($adresse, "&")+1, strpos($adresse, ".php")-strlen($adresse));
 
 		?>
 
@@ -111,7 +113,7 @@
 
 		<div id="section1">
 			<div class="aff">
-				<a href="index.html"><img src="<?php echo $donnees2['affiche']; ?>" alt="Metropolis VOD" class="affichefilm" /></a>
+				<a href="index.html"><img src="<?php echo $donnees3['affiche']; ?>" alt="Metropolis VOD" class="affichefilm" /></a>
 			</div>
 			<div class="bandeannonce">
 				<p>BANDE ANNONCE</p>
@@ -121,7 +123,7 @@
 
 
 			<div class="titrefilm">
-				<h3><?php echo $donnees2['titre'];  echo $identitefilm; ?><?php
+				<h3><?php echo $donnees2['titre'];  echo $identite; ?><?php
 
 
 
@@ -142,7 +144,7 @@
 			</div>
 			<div class="scenario">
 				<h3>Synopsis:</h3>
-				<p><?php echo $donnees3['synopsis']?></p>
+				<p><?php echo $donnees6['synopsis']?></p>
 			</div>
 			<div class="avis">
 
