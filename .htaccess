@@ -3,3 +3,6 @@ php56 1
 </IfDefine>
 RewriteEngine On
 RewriteRule ^fichefilm-&([1-9]).php$ fichefilm.php?p=$1 [L]
+
+
+([0-9]{1,2})
