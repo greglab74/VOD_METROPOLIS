@@ -142,7 +142,7 @@
 				<ul>
 					<?php while ($a = $reponse->fetch())
 			{ ?>
-					<li><a href="./fichefilm-&<?php echo $a['ID_films'];?>.php"><img src="img/<?php echo $a['ID_films'];?>.jpeg" alt="Metropolis VOD" class="pres1" /></a>
+					<li><a href="fichefilm.php?idfilm=<?php echo $a['ID_films'];?>"><img src="img/<?php echo $a['ID_films'];?>.jpeg" alt="Metropolis VOD" class="pres1" /></a>
 						<p class="fontroger">Titre</p>
 					</li><?php } ?>
 

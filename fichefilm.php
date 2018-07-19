@@ -84,10 +84,8 @@
 		  echo "Erreur!: " . $e->getMessage() . "<br/>";
 		  die();
 		}
+		$identite = $_GET['idfilm'];
 
-		$adresse = $_SERVER['REQUEST_URI'];
-		$identite = substr($adresse, strpos($adresse, "&")+1, strpos($adresse, ".php")-strlen($adresse));
-		$identitefilm = print_r($identite);
 		$reponse = $dbh->query('SELECT nom FROM acteurs NATURAL JOIN joue NATURAL JOIN films WHERE ID_films = "'.$identite.'"');
 		$reponse2 = $dbh->query('SELECT titre FROM films WHERE ID_films = "'.$identite.'"');
 		$reponse3 = $dbh->query('SELECT affiche FROM films WHERE ID_films = "'.$identite.'"');
@@ -123,7 +121,7 @@
 
 
 			<div class="titrefilm">
-				<h3><?php echo $donnees2['titre'];  echo $identite; ?><?php
+				<h3><?php echo $donnees2['titre']; ?><?php
 
 
 
