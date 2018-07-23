@@ -19,9 +19,18 @@ html {
   overflow: hidden;
 }
 
-.connexion a, nav img {
+.connexion a, .nav img {
   font-size: 2.5rem;
-  line-height: 60px;
+  line-height: 50px;
+  color: #FFF;
+  margin: 0 10px;
+  text-decoration: none;
+  font-family: 'Exo', sans-serif;
+}
+
+.connexion p {
+  font-size: 1.8rem;
+  line-height: 50px;
   color: #FFF;
   margin: 0 10px;
   text-decoration: none;
@@ -34,6 +43,11 @@ html {
   color: #FFF;
   margin: 0 10px;
   text-decoration: none;
+}
+
+.connexion input {
+  width: 140px;
+  height: 35px;
 }
 
 nav a:hover {
@@ -51,6 +65,10 @@ nav .connexion {
   display: flex;
   flex-direction: column;
   flex-direction: center;
+}
+
+nav form input {
+  margin: 15px 2px 2px 0px;
 }
 
 nav .logo {
@@ -79,7 +97,7 @@ nav .films a {
   float: left;
   display: flex;
   justify-content: space-between;
-  width: 68%;
+  width: 60%;
   align-items: center;
 }
 
@@ -249,7 +267,7 @@ main p {
   margin: 60px 10px 0 10px;
 }
 
-form input {
+#alignement form input {
   margin: 40px 10px 0 0;
 }
 
@@ -274,6 +292,11 @@ section {
   font-size: 2.5rem;
 }
 
+.pres1 {
+  width: 192px;
+  height: 262px;
+}
+
 /* Main fichefilms*/
 
 #section1 {
@@ -292,9 +315,14 @@ section {
 
 .bandeannonce {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-left: 50px;
+}
+
+.bandeannonce p {
+  margin-bottom: 20px;
 }
 
 .scenario, .titrefilm, .genrefilm, .realisateur, .acteurs {
@@ -311,6 +339,37 @@ section {
 .scenario p {
   font-size: 2.5rem;
   margin-left: 50px;
+}
+
+#ajfavoris {
+  margin: 30px 0 0 70px;
+}
+
+#favoris {
+  display: none;
+}
+
+#butfav {
+  width: 25%;
+  height: 50px;
+  font-size: 2.5rem;
+  background: black;
+  color: white;
+}
+
+/* Main traitadmin 1 et 2*/
+
+.modifphp {
+  font-size: 4rem;
+  margin-left: 50px;
+  color: white;
+}
+
+/* Main pagemembre */
+
+.listepagemembre ul {
+  display: flex;
+  margin: 10px 10px 10px 10px;
 }
 
 /* footer */
@@ -441,8 +500,6 @@ footer .down {
 #form-wrapper {
   background: url('../img/backgroundform.gif');
   position: absolute;
-  width: 60%;
-  height: 70%;
   top: 50%;
   left: 50%;
   font-size: 2.5rem;
@@ -524,6 +581,7 @@ footer .down {
 }
 
 #form-sidebar {
+  width: 350px;
   margin-right: 10px;
   display: flex;
   flex-direction: column;
@@ -541,11 +599,86 @@ ul .fab:hover {
   transition: 0.7s;
 }
 
+/* formulaire d'inscription */
+
+#overlay2 {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 997;
+}
+
+#form-wrapper2 {
+  background: url('../img/backgroundform.gif');
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  font-size: 2.5rem;
+  color: white;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+#form-wrapper2 .fas {
+  text-align: right;
+  margin-top: 10px;
+  color: white;
+}
+
+#form-wrapper2 .fas:hover {
+  color: #000c1a;
+  transition: 0.7s;
+}
+
+#form-wrapper2 h3 {
+  text-align: center;
+  margin: 10px 0 20px 0;
+  font-size: 3.5rem;
+}
+
+#forminscription {
+  margin: 15px 15px 15px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.input-wrap {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.input-wrap label, .input-wrap input {
+  font-size: 3rem;
+}
+
+.creer {
+  display: flex;
+  justify-content: center;
+}
+
+#creercompte {
+  width: 60%;
+  text-align: center;
+  font-size: 3rem;
+}
+
 /* Page admin */
 
 .formulaireadmin {
   background: black;
-  width: 60%;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
   border: 2px solid white;
